@@ -10,9 +10,11 @@ This is a MVC architecture based application where controller returns a page wit
 Checkout the repo and move to the directory
 
 ```
-git clone https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/sprint-boot-app
-cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
+git clone https://github.com/Sajiyah-Salat/Jenkins-e2e-k8s.git
+cd Jenkins-e2e-k8s/spring-boot-app
 ```
+[Install maven](https://www.digitalocean.com/community/tutorials/install-maven-linux-ubuntu) 
+
 
 Execute the Maven targets to generate the artifacts
 
@@ -26,11 +28,6 @@ The above maven target stroes the artifacts to the `target` directory. You can e
 ** Note: To avoid issues with local setup, Java versions and other dependencies, I would recommend the docker way. **
 
 
-### Execute locally (Java 11 needed) and access the application on http://localhost:8080
-
-```
-java -jar target/spring-boot-web.jar
-```
 
 ### The Docker way
 
@@ -43,6 +40,8 @@ docker build -t ultimate-cicd-pipeline:v1 .
 ```
 docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
 ```
+
+Go to instance edit inbound rules, open all traffic
 
 Hurray !! Access the application on `http://<ip-address>:8010`
 
