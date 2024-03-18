@@ -89,8 +89,11 @@ install sonarqube scanner and docker pipeline in jenkins
 ### Configure a Sonar Server locally
 
 ```
+sudo su -
 apt install unzip
 adduser sonarqube
+exit
+sudo su - sonarqube
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
 unzip *
 chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
