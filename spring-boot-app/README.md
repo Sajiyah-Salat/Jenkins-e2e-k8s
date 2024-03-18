@@ -105,3 +105,23 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 Hurray !! Now you can access the `SonarQube Server` on `http://<ip-address>:9000` 
 
 
+generate a sonarqube token and add it to jenkins credentials with id 'sonarqube' ans it will be secret text
+
+Run the below command to Install Docker
+
+```
+sudo su -
+apt update
+apt install docker.io
+```
+ 
+### Grant Jenkins user and Ubuntu user permission to docker deamon.
+
+```
+ 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+
