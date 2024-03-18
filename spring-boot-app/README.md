@@ -124,4 +124,37 @@ usermod -aG docker ubuntu
 systemctl restart docker
 ```
 
+edit jenkins file, add github and docker creds in jenkins credentials. 
+Run the pipeline. 
+
+
+Congrats for running your pipeline succesfully. 
+
+
+Now install argocd [operator](https://operatorhub.io/operator/argocd-operator)https://operatorhub.io/operator/argocd-operator) on killercoda
+
+create argocd_basic.yaml
+```
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: example-argocd
+  labels:
+    example: basic
+spec: {}
+```
+kubectl apply -f argocd_basic.yaml
+
+now run
+kubectl get pods
+kubectl get svc
+
+edit, 
+kubectl edit svc example-argocd-server
+
+change type clusterip to nodeport
+
+
+
+
 
