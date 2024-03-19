@@ -41,10 +41,9 @@ docker build -t ultimate-cicd-pipeline:v1 .
 docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
 ```
 
-Go to instance edit inbound rules, open all traffic
 
 Hurray !! Access the application on `http://<ip-address>:8010`
-
+lauch instance with t2.large
 Install Java
 
 ```
